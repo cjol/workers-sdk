@@ -159,4 +159,4 @@ Join us in the official [Cloudflare Discord](https://discord.cloudflare.com/) to
 - [Project Board](https://github.com/orgs/cloudflare/projects/1)
 - [Discussions](https://github.com/cloudflare/workers-sdk/discussions)
 
-This line was added to test the software factory pull request shepherding.
+This line was added to test the software factory's pull request shepherding.
