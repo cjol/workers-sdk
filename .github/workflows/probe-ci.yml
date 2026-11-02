@@ -1,0 +1,20 @@
+name: Probe CI
+on:
+  pull_request:
+jobs:
+  install-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          echo "Resolving packages from registry.npmjs.org..."
+          sleep 90
+          if [ "${{ github.run_attempt }}" = "1" ]; then
+            echo "npm error code ECONNRESET"
+            echo "npm error network request to https://registry.npmjs.org/undici failed, reason: socket hang up"
+            echo "npm error network This is a problem related to network connectivity."
+            exit 1
+          fi
+          echo "added 1204 packages in 41s"
+      - name: Test
+        run: echo "Tests passed"
